@@ -1,0 +1,250 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Common CSS */
+
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/rubik/v14/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-B4iFV0U1.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+html {
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    color: hsl(235, 45%, 61%); 
+}
+
+body {
+    background-color: hsl(226, 43%, 10%); 
+}
+
+
+.above {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.active {
+    color: white;
+}
+
+
+/* user content */
+
+#user {
+    height: 564px;
+    position: relative;
+    margin-top: 24px;
+}
+
+#user #user-information {
+    z-index: 1;
+    height: 70%;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: hsl(246, 80%, 60%)    
+}
+
+#user #user-information img {
+    width: 37%;
+    margin-bottom: 40px;
+    border-radius: 100%;
+    border: 3px solid white;
+}
+
+#user-information #user-name {
+    margin-top: 10px;
+
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 400;
+    color: #ccc;
+}
+
+#timeframes {
+    height: 35%;
+    padding: 50px 30px 50px;
+
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+}
+
+#timeframes ul > li {
+    line-height: 2.5rem;
+    cursor: pointer;
+    list-style-type: none;
+}
+
+#timeframes ul > li:hover {
+    color: white;
+}
+
+#time .activity-item {
+    position: relative;
+    height: 270px;
+    margin-top: 24px;
+}
+
+#work {
+    background: hsl(15, 100%, 70%) url('https://maithiyenlinh.github.io/time-tracking-dashboard/images/icon-work.svg')  top -10px right 15px / 100px no-repeat;
+}
+
+#play {
+    background: hsl(195, 74%, 62%) url('https://maithiyenlinh.github.io/time-tracking-dashboard/images/icon-play.svg') top -10px right 15px / 100px no-repeat;
+}
+
+#study {
+    background: hsl(348, 100%, 68%) url('https://maithiyenlinh.github.io/time-tracking-dashboard/images/icon-study.svg') top -10px right 15px / 100px no-repeat;
+}
+
+#exercise {
+    background: hsl(145, 58%, 55%) url('https://maithiyenlinh.github.io/time-tracking-dashboard/images/icon-exercise.svg') top -10px right 15px / 100px no-repeat;
+}
+
+#social {
+    background: hsl(264, 64%, 52%) url('https://maithiyenlinh.github.io/time-tracking-dashboard/images/icon-social.svg') top -10px right 15px / 100px no-repeat;
+}
+
+#self {
+    background: hsl(43, 84%, 65%) url('https://maithiyenlinh.github.io/time-tracking-dashboard/images/icon-self-care.svg') top -10px right 15px / 100px no-repeat;
+}
+
+.activity-item .item-background {
+    height: 30%;
+    border-radius: 15px;
+}
+
+.activity-item .item-information {
+    height: 80%;
+
+    border-radius: 15px;
+    padding: 30px;
+    cursor: pointer;
+    background-color: hsl(235, 46%, 20%);
+
+    color: #ccc;
+}
+
+.icon{
+    position: absolute;
+    padding: 30px;
+    right: 0;
+    top: 0;
+}
+
+.activity-item .item-information .item-current-time {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.activity-item .item-information .item-previous-time {
+    color: hsl(235, 45%, 61%); 
+}
+
+.activity-item .item-overlay {
+    height: 80%;
+    display: none;
+    opacity: 0.1;
+    background-color:white;
+    cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+    #main {
+        margin: auto;
+        width: 90vw;
+    }
+
+    #user #user-information img {
+        width: 25%;
+    }
+}
+
+@media (max-width: 449px) {
+    html {
+        font-size: 16px;
+    }
+
+    #user {
+        height: 220px;
+    }
+
+    #user #user-information {
+        height: 62.5%;
+    }
+
+    #user #user-information img {
+        width: 25%;
+        float: left;
+        margin-right: 15px;
+    }
+
+    #user-information #user-name {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    } 
+
+    #timeframes {
+        height: 45%;
+        padding: 40px 0;
+    }
+
+    #timeframes ul {
+        display: flex;
+        width: 90vw;
+    }
+
+    #timeframes ul > li {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+        text-align: center;
+    }
+
+    #time .activity-item {
+        height: 165px;
+    }
+
+    .activity-item .item-background {
+        height: 50%;
+    }
+
+    .activity-item .item-information {
+        padding: 20px 20px 30px;
+        height: 66.66667%;
+    }
+
+    .activity-item .item-information .item-current-time {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        display: inline-block;
+    }
+
+
+    .activity-item .item-information .item-previous-time {
+        float: right;
+        margin-top: 1.2rem;
+    }
+    
+    .activity-item .item-overlay {
+        height: 66.66667%;
+    }
+}
